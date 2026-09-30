@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamus Multi Bahasa</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistem Informasi Data Mahasiswa - Praktikum 1 – Kelas PPW C</h1>
+        <p>Multi kamus dengan maksimal 6 bahasa</p>
+        <img src="book.jpeg" alt="gambar buku ditumpuk" width="250" height="250">
+    </header>
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="#informasi">Informasi Aplikasi</a></li>
+            <li><a href="#daftar-mahasiswa">Daftar Mahasiswa</a></li>
+            <li><a href="#form-tambah">Tambah Mahasiswa Baru</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <main>
+        <section id="informasi">
+            <h2>Informasi Sistem</h2>
+            <p>Sistem yang terdapat inforamsi-informasi mahasiswa</p>
+            <article>
+                <h3>Seorang Pria kalimantan memakan sambal 3 ton</h3>
+                <p>Terdapat pria meninggal karena konsumsi sambal sebanyak 3 ton dalam sehari</p>
+            </article>
+        </section>
+    </main>
+    <hr>
+
+    <section id="daftar-mahasiswa">
+        <h2>Daftar Mahasiswa Aktif</h2>
+        <p>Menampilkan Mahasiswa yang masih aktif</p>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Foto</th>
+                    <th>NPM</th>
+                    <th>Nama Lengkap</th>
+                    <th>Program Studi</th>
+                    <th>Angkatan</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src="aku.jpeg" alt="" width="170"></td>
+                    <td>2415061083</td>
+                    <td>Muhammad Alfaruq Hasan</td>
+                    <td>Teknik Informatika</td>
+                    <td>2024</td>
+                    <td>hasan24@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="kapibara.jpg" alt="" width="170"></td>
+                    <td>2415121123</td>
+                    <td>Muhammad Kapi Buara</td>
+                    <td>Teknik Gizi</td>
+                    <td>2022</td>
+                    <td>tapibara22@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="kiwi.jpeg" alt="" width="170"></td>
+                    <td>2415021081</td>
+                    <td>Muhammad K. W.</td>
+                    <td>Teknik Angkasa</td>
+                    <td>2027</td>
+                    <td>Kaiwi27@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <hr>
+
+    <section id="form-tambah">
+        <h2>Tambah Mahasiswa Baru</h2>
+        <p>Tempat menambahkan mahasiswa baru</p>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Form Menambah Mahasiswa Baru</legend>
+
+                <p>
+                    <label for="npm">Nomor Pokok Mahasiswa (NPM):</label> <br>
+                    <input type="text" name="npm" id="npm" placeholder="Contoh : 2315061118" required pattern="(0-9){8,12}" title="NPM harus berupa angka 8-12 digit"> <br>
+                    <small>npm akan menjadi akun mahasiswa</small>
+                </p>
+
+                <p>
+                    <label for="nama">Nama Lengkap:</label><br>
+                    <input type="text" name="nama" id="nama" placeholder="Contoh : M. Sidiq Firdaus" required   minlength="3" maxlength="100"> <br>
+                    <small>Cek kembali namanya sebelum submit</small>
+                </p>
+
+                <p>
+                    <label for="program_studi">Program Studi:</label><br>
+                    <select name="program_studi" id="program_studi" required>
+                        <option value="">Pilih Program Studi</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                    </select> <br>
+                    <small>Pilih prodi sesuai</small>
+                </p>
+
+                <p>
+                    <label for="angkatan">Tahun Angkatan</label> <br>
+                    <input type="number" name="angkatan" id="angkatan" placeholder="Contoh : 2024" required max="2018" min="2026"> <br>
+                    <small>Masukkan tahun masuk</small>
+                </p>
+
+                <p>
+                    <label for="email">Alamat Email</label> <br>
+                    <input type="email" name="email" id="email" placeholder="Contoh : email@example.com" required> <br>
+                    <small>Pastikan email bisa dibuka</small>
+                </p>
+                
+                <p>
+                    <button type="submit">Simpan Data Mahasiswa</button>
+                    <button type="reset">Reset Formulir</button>
+                </p>
+
+            </fieldset>
+        </form>
+    </section>
+
+</body>
+
+</html>
