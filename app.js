@@ -24,7 +24,7 @@ let dataMahasiswa = [
 ];
 
 // 2. Elemen Dom Utama.
-
+const alertbox = document.getElementById("alert-body");
 
 /*
 // Seleksi Elemen Formulir Tambah Mahasiswa
@@ -38,7 +38,15 @@ const inputEmail = document.getElementById("email");
 
 
 // 3. Fungsi Menampilkan Notifikasi Alert Interaktif (Percobaan 3-1).
+function showAlert (message, type = "success"){
+    if(!alertbox) return;
+    alertbox.textContent = message;
+    alertbox.className = 'alert-box alert-${type} show';
 
+    setTimeout(() => {
+        alertbox.class = 'alert-box' ;
+    }, 4000);
+}
 
 
 // 4. Fungsi Pembaruan Counter Statistik Real-Time.
